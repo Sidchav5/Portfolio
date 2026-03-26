@@ -1,0 +1,510 @@
+/* AboutSection.css - Enhanced Professional Formal Design */
+
+/* Section Styling - Using Design System Variables */
+.section {
+  padding: var(--space-16) 0;
+  background: linear-gradient(135deg, var(--bg) 0%, var(--paper) 100%);
+  position: relative;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  isolation: isolate;
+}
+
+/* Enhanced gradient accent with design system colors */
+.section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent) 0%, var(--accent-light) 50%, var(--accent-soft) 100%);
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: slideIn 0.6s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+@keyframes slideIn {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* Subtle background pattern for depth */
+.section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 80%, rgba(212, 175, 55, 0.02) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Container */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--space-8);
+  position: relative;
+  z-index: 1;
+}
+
+/* Section Title - Enhanced */
+.section-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin-bottom: var(--space-6);
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(135deg, var(--ink) 0%, var(--accent) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 200%;
+  transition: background-position 0.3s ease;
+}
+
+.section-title:hover {
+  background-position: 100% 100%;
+}
+
+/* Enhanced professional underline effect */
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-light));
+  border-radius: 3px;
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.section:hover .section-title::after {
+  width: 90px;
+}
+
+/* About Text Container - Enhanced */
+.about-text-wrapper {
+  position: relative;
+  max-width: 980px;
+  margin-top: var(--space-4);
+}
+
+/* Professional Summary Text */
+.about-text {
+  font-size: var(--text-lg);
+  line-height: 1.8;
+  color: var(--muted);
+  margin: 0;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Optional decorative quote mark */
+.about-text::first-letter {
+  font-size: 3.5rem;
+  font-family: 'DM Serif Display', serif;
+  float: left;
+  line-height: 0.8;
+  margin-right: var(--space-2);
+  color: var(--accent);
+  font-weight: 500;
+  opacity: 0.3;
+}
+
+/* Enhanced readability with subtle border accent */
+.about-text::before {
+  content: '';
+  position: absolute;
+  left: -24px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, var(--accent), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.about-text:hover::before {
+  opacity: 0.5;
+}
+
+/* Optional: Highlighted keywords */
+.about-text mark {
+  background: linear-gradient(120deg, var(--accent-soft) 0%, var(--accent-soft) 40%, transparent 60%);
+  color: var(--accent);
+  padding: 0 var(--space-1);
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+/* Stats/Highlights Section - Optional Enhancement */
+.about-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-6);
+  margin-top: var(--space-8);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--panel-border);
+  max-width: 980px;
+}
+
+.highlight-item {
+  flex: 1;
+  min-width: 120px;
+  text-align: center;
+  padding: var(--space-3);
+  background: var(--paper);
+  border-radius: 16px;
+  border: 1px solid var(--panel-border);
+  transition: all 0.3s ease;
+}
+
+.highlight-item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+  border-color: var(--accent-soft);
+}
+
+.highlight-number {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: var(--accent);
+  font-family: 'DM Serif Display', serif;
+  line-height: 1;
+  margin-bottom: var(--space-1);
+}
+
+.highlight-label {
+  font-size: var(--text-sm);
+  color: var(--muted);
+  font-weight: 500;
+}
+
+/* Quote/Testimonial Style - Optional */
+.about-quote {
+  margin-top: var(--space-6);
+  padding: var(--space-4) var(--space-6);
+  background: var(--accent-soft);
+  border-radius: 16px;
+  border-left: 4px solid var(--accent);
+  max-width: 980px;
+  font-style: italic;
+  color: var(--ink);
+  font-size: var(--text-base);
+  line-height: 1.6;
+}
+
+.about-quote-author {
+  margin-top: var(--space-2);
+  font-style: normal;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  .section {
+    padding: var(--space-12) 0;
+  }
+  
+  .container {
+    padding: 0 var(--space-6);
+  }
+  
+  .section-title {
+    margin-bottom: var(--space-5);
+  }
+  
+  .section-title::after {
+    width: 50px;
+    bottom: -10px;
+  }
+  
+  .about-text {
+    font-size: var(--text-base);
+    line-height: 1.7;
+  }
+  
+  .about-text::first-letter {
+    font-size: 2.5rem;
+  }
+  
+  .about-text::before {
+    left: -16px;
+  }
+  
+  .about-highlights {
+    gap: var(--space-4);
+    margin-top: var(--space-6);
+    padding-top: var(--space-4);
+  }
+  
+  .highlight-item {
+    min-width: 100px;
+    padding: var(--space-2);
+  }
+  
+  .highlight-number {
+    font-size: var(--text-xl);
+  }
+  
+  .highlight-label {
+    font-size: var(--text-xs);
+  }
+  
+  .about-quote {
+    padding: var(--space-3) var(--space-4);
+    font-size: var(--text-sm);
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 0 var(--space-4);
+  }
+  
+  .section {
+    padding: var(--space-10) 0;
+  }
+  
+  .section-title {
+    font-size: clamp(1.75rem, 5vw, 2rem);
+  }
+  
+  .section-title::after {
+    width: 45px;
+    height: 2.5px;
+  }
+  
+  .about-text {
+    font-size: var(--text-sm);
+    line-height: 1.65;
+  }
+  
+  .about-text::first-letter {
+    font-size: 2rem;
+    margin-right: var(--space-1);
+  }
+  
+  .about-text::before {
+    display: none;
+  }
+  
+  .about-highlights {
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+  
+  .highlight-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    padding: var(--space-3);
+  }
+  
+  .highlight-number {
+    font-size: var(--text-lg);
+    margin-bottom: 0;
+  }
+  
+  .about-quote {
+    padding: var(--space-3);
+  }
+}
+
+/* Animation Enhancements */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section {
+  animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.about-text {
+  animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.2s forwards;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+/* Scroll-triggered animation support */
+.section.revealed .about-text {
+  opacity: 1;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .section,
+  .about-text {
+    animation: none;
+    opacity: 1;
+  }
+  
+  .section::before {
+    animation: none;
+    transform: scaleX(1);
+  }
+  
+  .section-title::after {
+    transition: none;
+  }
+  
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Print styles */
+@media print {
+  .section {
+    background: white;
+    padding: 20px 0;
+    break-inside: avoid;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .section::before,
+  .section::after {
+    display: none;
+  }
+  
+  .section-title {
+    background: none;
+    -webkit-text-fill-color: black;
+    color: black;
+    font-size: 18pt;
+  }
+  
+  .section-title::after {
+    background: black;
+  }
+  
+  .about-text {
+    color: black;
+    font-size: 12pt;
+    line-height: 1.5;
+  }
+  
+  .about-text::first-letter {
+    color: black;
+    opacity: 1;
+  }
+  
+  .about-highlights,
+  .about-quote {
+    display: none;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .section {
+    background: white;
+  }
+  
+  .section-title {
+    background: none;
+    -webkit-text-fill-color: black;
+    color: black;
+  }
+  
+  .about-text {
+    color: black;
+  }
+  
+  .section-title::after {
+    background: black;
+  }
+  
+  .about-text::first-letter {
+    color: black;
+    opacity: 1;
+  }
+}
+
+/* Dark mode optimization */
+@media (prefers-color-scheme: dark) {
+  .section {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  }
+  
+  .about-text mark {
+    background: linear-gradient(120deg, rgba(242, 201, 76, 0.2) 0%, rgba(242, 201, 76, 0.2) 40%, transparent 60%);
+  }
+  
+  .about-quote {
+    background: rgba(242, 201, 76, 0.1);
+  }
+  
+  .highlight-item {
+    background: #1e293b;
+  }
+}
+
+/* Focus visibility */
+.section:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Optional: Read more/less functionality */
+.read-more-btn {
+  display: inline-block;
+  margin-top: var(--space-4);
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.read-more-btn:hover {
+  transform: translateX(4px);
+  color: var(--accent-light);
+}
+
+/* Optional: Decorative element */
+.section-decoration {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, var(--accent-soft) 0%, transparent 70%);
+  opacity: 0.3;
+  pointer-events: none;
+  border-radius: 50%;
+  z-index: 0;
+}

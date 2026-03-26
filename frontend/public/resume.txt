@@ -1,0 +1,53 @@
+Siddhesh Chavan
+# csiddhesh768@gmail.com |  +91 8459861918 | Pune, Maharashtra | ï LinkedIn | § GitHub
+Professional Summary
+AI & Data Science undergraduate specializing in intelligent system design and full-stack development. Built
+production-ready applications integrating machine learning models, real-time APIs, and secure authentication across
+legal tech, inventory management, and mobility domains. Strong foundation in data structures, algorithms, and modern
+web architectures. Proven leadership as President of Speaker’s Club, managing cross-functional teams and
+institute-level events. Eager to apply technical expertise and strategic thinking in data-driven organizations.
+Technical Skills
+Languages: Java, Python, C, C++, JavaScript Databases: MySQL, SQLite, MongoDB, Firebase
+Web: React, Flask, Node.js, React Native, HTML, CSS Tools: Git, GitHub, PowerBI, Railway
+AI/NLP: Transformers, BERT, Hugging Face, NLTK Machine Learning: Regression, XGBoost, Random Forest,
+SVM
+Gen-AI & APIs: Gemini, Groq, Google APIs, LangFlow CP Platforms: LeetCode, Codeforces, CodeChef, GFG
+Projects
+AI-Powered Legal Contract Clause Analysis & Community Platform
+• Automated contract review workflows using LegalBERT and MNLI ensemble models, reducing manual review time by 30–40%.
+• Implemented clause-level legal risk classification using context-aware transformer models.
+• Built Gemini LLM-powered contract generation with JWT-secured RBAC system.
+• Developed RESTful Flask APIs with React frontend and community discussion forum.
+Smart Warehouse & Retail Inventory Management System
+• Architected a multi-role inventory platform for consumers, retail stores, and warehouse managers.
+• Implemented real-time stock allocation across online and offline sales channels.
+• Developed freshness-based inventory tracking with predictive restocking insights.
+• Built scalable Flask APIs with MySQL optimization for high-volume transactions.
+SoberFolks – On-Demand Designated Driver Platform
+• Built cross-platform mobile application for on-demand designated driver booking.
+• Engineered geohash-based spatial indexing for sub-second driver–rider matching.
+• Integrated Google Maps APIs for routing, ETA, and fare estimation.
+• Developed secure Node.js backend with JWT authentication and session management.
+Constitution AI Platform – Legal Education & Engagement Tool
+• Developed AI-powered platform democratizing access to Indian Constitutional knowledge.
+• Built Gemini LLM chatbot using Retrieval-Augmented Generation (RAG).
+• Implemented interactive quizzes with difficulty progression and live leaderboards.
+Education
+B.Tech in Artificial Intelligence & Data Science 2023–2027
+Vishwakarma Institute of Technology, Pune CGPA: 9.26/10
+Experience & Achievements
+Leadership Experience Achievements & Certifications
+• President- Speaker’s Club, VIT Pune(2025–Present)
+• Led 40+ members; organized institute-level leadership and
+technical events.
+• Execution Lead - Speaker’s Club (2024–2025)
+• Coordinated cross-functional teams for large-scale events.
+• Finalist – UBS Campus Hackathon 2025
+• Finalist – GeekVishwa 2.0 (VIIT Pune)
+• Introduction to AI – LinkedIn Learning
+• Python Quick Start – LinkedIn Learning
+• Applications of AI for Anomaly Detection – NVIDIA
+• Generative AI with Diffusion Models – NVIDIA
+Languages & Interests
+Languages: English, Hindi, Marathi
+Interests: Chess, Basketball, Tech Exploration, Debates, Geo-politics

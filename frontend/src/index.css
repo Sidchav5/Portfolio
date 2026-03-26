@@ -1,13 +1,420 @@
+/* Global Styles - Professional Formal Design */
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Manrope', sans-serif;
+  background-color: var(--bg, #f8fafc);
+  color: var(--ink, #0f172a);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
+/* Typography Scale */
+body {
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+/* Code Block Styling - Professional & Readable */
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: 'Consolas', 'Courier New', 'SF Mono', 'Monaco', monospace;
+  font-size: 0.875em;
+  padding: 0.2em 0.4em;
+  background: rgba(212, 175, 55, 0.08);
+  border-radius: 6px;
+  color: var(--accent, #d4af37);
+  font-weight: 500;
+  border: 1px solid rgba(212, 175, 55, 0.1);
+  white-space: nowrap;
+}
+
+/* Code blocks for multi-line code */
+pre {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: var(--paper, #ffffff);
+  border: 1px solid var(--panel-border, #e2e8f0);
+  border-radius: 12px;
+  overflow-x: auto;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  box-shadow: var(--shadow-sm, 0 1px 2px 0 rgb(0 0 0 / 0.05));
+}
+
+pre code {
+  background: none;
+  padding: 0;
+  border: none;
+  color: var(--ink, #0f172a);
+  white-space: pre;
+  font-weight: 400;
+}
+
+/* Headings Consistency */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'DM Serif Display', serif;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: var(--ink, #0f172a);
+}
+
+h1 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  line-height: 1.3;
+}
+
+h3 {
+  font-size: clamp(1.5rem, 3vw, 1.875rem);
+  line-height: 1.4;
+}
+
+h4 {
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+  line-height: 1.4;
+}
+
+/* Links Styling */
+a {
+  color: var(--accent, #0f3b2c);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+/* Subtle underline on hover */
+a:not(.btn):not(.nav-link)::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: currentColor;
+  transition: width 0.3s ease;
+}
+
+a:not(.btn):not(.nav-link):hover::after {
+  width: 100%;
+}
+
+a:hover {
+  color: var(--accent-light, #1e4a3a);
+}
+
+/* Selection Styling */
+::selection {
+  background: var(--accent-soft, #fef3c7);
+  color: var(--accent, #d4af37);
+}
+
+::-moz-selection {
+  background: var(--accent-soft, #fef3c7);
+  color: var(--accent, #d4af37);
+}
+
+/* Focus Styles for Accessibility */
+:focus-visible {
+  outline: 2px solid var(--accent, #d4af37);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Button and Interactive Elements */
+button,
+[role="button"],
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+/* Smooth Scroll Behavior */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+  }
+}
+
+/* Scrollbar Styling - Professional & Subtle */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg, #f8fafc);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--muted, #334155);
+  border-radius: 10px;
+  transition: background 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent, #d4af37);
+}
+
+/* Firefox Scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--muted, #334155) var(--bg, #f8fafc);
+}
+
+/* Container for consistent width */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.text-muted {
+  color: var(--muted, #334155);
+}
+
+.mt-1 { margin-top: 0.25rem; }
+.mt-2 { margin-top: 0.5rem; }
+.mt-3 { margin-top: 1rem; }
+.mt-4 { margin-top: 1.5rem; }
+.mt-5 { margin-top: 2rem; }
+
+.mb-1 { margin-bottom: 0.25rem; }
+.mb-2 { margin-bottom: 0.5rem; }
+.mb-3 { margin-bottom: 1rem; }
+.mb-4 { margin-bottom: 1.5rem; }
+.mb-5 { margin-bottom: 2rem; }
+
+/* Animation Classes */
+.fade-in {
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.slide-up {
+  animation: slideUp 0.6s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Print Styles */
+@media print {
+  body {
+    background: white;
+    color: black;
+    font-size: 12pt;
+  }
+  
+  a {
+    color: black;
+    text-decoration: underline;
+  }
+  
+  a::after {
+    display: none;
+  }
+  
+  .container {
+    max-width: none;
+    padding: 0;
+  }
+  
+  code {
+    background: none;
+    border: 1px solid #ddd;
+    color: black;
+  }
+  
+  pre {
+    border: 1px solid #ddd;
+    background: none;
+    box-shadow: none;
+  }
+  
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  a::after {
+    transition: none;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  body {
+    background: white;
+    color: black;
+  }
+  
+  code {
+    border: 1px solid black;
+    background: none;
+  }
+  
+  a {
+    color: blue;
+    text-decoration: underline;
+  }
+  
+  a::after {
+    display: none;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #0f172a;
+    color: #f1f5f9;
+  }
+  
+  code {
+    background: rgba(242, 201, 76, 0.15);
+    border-color: rgba(242, 201, 76, 0.25);
+    color: #f2c94c;
+  }
+  
+  pre {
+    background: #1e293b;
+    border-color: #334155;
+  }
+  
+  pre code {
+    color: #f1f5f9;
+  }
+  
+  ::selection {
+    background: rgba(242, 201, 76, 0.3);
+    color: #f1f5f9;
+  }
+}
+
+/* Loading States (if needed) */
+.loading {
+  position: relative;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border: 2px solid var(--accent-soft);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive Typography Adjustments */
+@media (max-width: 768px) {
+  h1 {
+    margin-bottom: 0.75rem;
+  }
+  
+  h2 {
+    margin-bottom: 0.75rem;
+  }
+  
+  pre {
+    font-size: 0.8125rem;
+    padding: 0.875rem;
+  }
+}
+
+/* Focus Within for Forms (if applicable) */
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+}
+
+/* Helper Classes for Debugging (optional) */
+.debug {
+  border: 1px solid red;
+}
+
+.debug * {
+  border: 1px solid rgba(255, 0, 0, 0.2);
 }
