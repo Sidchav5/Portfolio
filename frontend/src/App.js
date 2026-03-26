@@ -57,7 +57,7 @@ function App() {
             <SkillsSection skillGroups={skillGroups} />
             <ProjectsSection projects={projects} />
             <BlogsSection blogs={blogs} />
-            <EducationSection education={education} />
+            <EducationSection education={education} showHonors />
             <AchievementsSection achievements={achievements} />
           </>
         )}

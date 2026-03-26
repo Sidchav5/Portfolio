@@ -137,6 +137,11 @@ export const education = {
   institute: 'Vishwakarma Institute of Technology, Pune',
   timeline: '2023-2027',
   cgpa: '9.26 / 10',
+  honors: [
+    'JEE Percentile: 93.76',
+    'MHT-CET Percentile: 96.74',
+    '10th CBSE: 94%',
+  ],
 };
 
 export const achievements = [
