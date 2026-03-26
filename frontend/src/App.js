@@ -5,6 +5,7 @@ import HeroSection from './components/HeroSection';
 import AboutSection from './components/AboutSection';
 import SkillsSection from './components/SkillsSection';
 import ProjectsSection from './components/ProjectsSection';
+import BlogsSection from './components/BlogsSection';
 import EducationSection from './components/EducationSection';
 import AchievementsSection from './components/AchievementsSection';
 import Footer from './components/Footer';
@@ -13,6 +14,7 @@ import {
   summary,
   skillGroups,
   projects,
+  blogs,
   education,
   achievements,
   contact,
@@ -28,6 +30,7 @@ function App() {
         <AboutSection summary={summary} />
         <SkillsSection skillGroups={skillGroups} />
         <ProjectsSection projects={projects} />
+        <BlogsSection blogs={blogs} />
         <EducationSection education={education} />
         <AchievementsSection achievements={achievements} />
       </main>

@@ -23,6 +23,7 @@ function Navbar({ name }) {
               <li className="nav-item"><a className="nav-link" href="#about">About</a></li>
               <li className="nav-item"><a className="nav-link" href="#skills">Skills</a></li>
               <li className="nav-item"><a className="nav-link" href="#projects">Projects</a></li>
+              <li className="nav-item"><a className="nav-link" href="#blogs">Blogs</a></li>
               <li className="nav-item"><a className="nav-link" href="#education">Education</a></li>
               <li className="nav-item"><a className="nav-link" href="#achievements">Achievements</a></li>
               <li className="nav-item">

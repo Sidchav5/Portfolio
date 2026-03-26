@@ -182,6 +182,35 @@ export const achievements = [
   },
 ];
 
+export const blogs = [
+  {
+    title: 'Building LawgicAI: From Legal PDFs to Actionable Clause Risk Insights',
+    category: 'Project Experience',
+    date: 'Mar 2026',
+    excerpt:
+      'How we designed a clause-level risk pipeline with LegalBERT, MNLI, and role-based workflows to reduce manual contract review effort.',
+    tags: ['NLP', 'Flask', 'React', 'Legal Tech'],
+    link: 'https://github.com/Sidchav5/College_LawgicAI',
+  },
+  {
+    title: 'Leading 40+ Members as Speaker\'s Club President',
+    category: 'Leadership',
+    date: '2025-Present',
+    excerpt:
+      'What I learned about ownership, team delegation, and execution while managing institute-level events and cross-functional student teams.',
+    tags: ['Leadership', 'Team Management', 'Execution'],
+  },
+  {
+    title: 'Deep Learning-Based Answer Evaluation: Multi-Metric Scoring in Practice',
+    category: 'Project Experience',
+    date: 'Feb 2026',
+    excerpt:
+      'A practical walkthrough of combining semantic similarity, NLI reasoning, and RAG feedback to improve descriptive answer assessment quality.',
+    tags: ['SBERT', 'NLI', 'RAG', 'Groq'],
+    link: 'https://github.com/Sidchav5/Deep-Learning-Based-Answer-Evaluater',
+  },
+];
+
 export const contact = {
   name: 'Siddhesh Chavan',
   email: 'csiddhesh768@gmail.com',
