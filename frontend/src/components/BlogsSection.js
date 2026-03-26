@@ -29,17 +29,26 @@ function BlogsSection({ blogs }) {
                 ))}
               </div>
 
-              {blog.link && (
+              <div className="blog-actions">
                 <a
-                  href={blog.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href={`#/blog/${encodeURIComponent(blog.slug)}`}
                   className="blog-link"
-                  aria-label={`Read more about ${blog.title}`}
+                  aria-label={`Read full blog for ${blog.title}`}
                 >
                   Read More
                 </a>
-              )}
+                {blog.link && (
+                  <a
+                    href={blog.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="blog-source"
+                    aria-label={`Open source link for ${blog.title}`}
+                  >
+                    Source
+                  </a>
+                )}
+              </div>
             </article>
           ))}
         </div>

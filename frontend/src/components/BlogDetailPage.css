@@ -1,0 +1,127 @@
+/* BlogDetailPage.css */
+
+.blog-detail-panel {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: var(--space-8);
+}
+
+.blog-detail-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+.blog-detail-category {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-1) var(--space-3);
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.blog-detail-date {
+  color: var(--muted);
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+.blog-detail-lead {
+  margin: var(--space-5) 0 var(--space-4);
+  color: var(--muted);
+  font-size: var(--text-lg);
+  line-height: 1.8;
+}
+
+.blog-detail-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-8);
+}
+
+.blog-detail-tag {
+  padding: var(--space-1) var(--space-2);
+  border-radius: 10px;
+  border: 1px solid var(--panel-border);
+  background: #fafafa;
+  color: var(--muted);
+  font-size: var(--text-xs);
+  font-weight: 600;
+}
+
+.blog-detail-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.blog-content-section h3 {
+  margin: 0 0 var(--space-3);
+  color: var(--ink);
+  font-size: var(--text-2xl);
+  font-family: 'DM Serif Display', serif;
+}
+
+.blog-content-section p {
+  margin: 0 0 var(--space-3);
+  color: var(--muted);
+  font-size: var(--text-base);
+  line-height: 1.8;
+}
+
+.blog-detail-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-top: var(--space-10);
+  flex-wrap: wrap;
+}
+
+.blog-back-link,
+.blog-source-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.blog-back-link {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.blog-back-link::before {
+  content: '←';
+}
+
+.blog-source-link {
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  background: transparent;
+}
+
+.blog-source-link::after {
+  content: '↗';
+}
+
+@media (max-width: 768px) {
+  .blog-detail-panel {
+    padding: var(--space-6);
+  }
+
+  .blog-detail-meta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

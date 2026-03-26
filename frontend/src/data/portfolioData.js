@@ -184,6 +184,7 @@ export const achievements = [
 
 export const blogs = [
   {
+    slug: 'lawgicai-clause-risk-insights',
     title: 'Building LawgicAI: From Legal PDFs to Actionable Clause Risk Insights',
     category: 'Project Experience',
     date: 'Mar 2026',
@@ -191,16 +192,78 @@ export const blogs = [
       'How we designed a clause-level risk pipeline with LegalBERT, MNLI, and role-based workflows to reduce manual contract review effort.',
     tags: ['NLP', 'Flask', 'React', 'Legal Tech'],
     link: 'https://github.com/Sidchav5/College_LawgicAI',
+    details: [
+      {
+        heading: 'Problem We Solved',
+        paragraphs: [
+          'Contract teams were spending too much time manually scanning long agreements for risky clauses. The process was slow, inconsistent, and difficult to scale across high document volumes.',
+          'Our goal was to build a system that could flag clause-level risks, explain why the risk exists, and help users move from document reading to decision-making faster.',
+        ],
+      },
+      {
+        heading: 'System Design',
+        paragraphs: [
+          'We built a two-stage NLP pipeline. Stage one uses LegalBERT embeddings for semantic understanding; stage two uses an MNLI-style inference model to classify legal intent and contradiction risk.',
+          'A Flask backend exposes document ingestion, clause extraction, and scoring APIs, while React provides role-based interfaces for reviewers, admins, and community contributors.',
+        ],
+      },
+      {
+        heading: 'Execution and Leadership',
+        paragraphs: [
+          'I led integration across model, backend, and UI modules, ensuring each team member had clear responsibilities and weekly milestones.',
+          'We used iterative validation with real legal-style samples, improving false-positive handling and making outputs easier for non-technical users to interpret.',
+        ],
+      },
+      {
+        heading: 'Outcome and Learning',
+        paragraphs: [
+          'The platform reduced manual review time significantly and improved review consistency by standardizing risk signals.',
+          'The biggest learning was that explainability matters as much as accuracy in legal tech; users trust systems that show reasoning, not only predictions.',
+        ],
+      },
+    ],
   },
   {
+    slug: 'speakers-club-leadership-lessons',
     title: 'Leading 40+ Members as Speaker\'s Club President',
     category: 'Leadership',
     date: '2025-Present',
     excerpt:
       'What I learned about ownership, team delegation, and execution while managing institute-level events and cross-functional student teams.',
     tags: ['Leadership', 'Team Management', 'Execution'],
+    details: [
+      {
+        heading: 'Leadership Context',
+        paragraphs: [
+          'As President, I worked with a team of 40+ members across event operations, sponsorship, communications, and stage management.',
+          'Our challenge was maintaining high execution quality while balancing academics, deadlines, and frequent changes in event requirements.',
+        ],
+      },
+      {
+        heading: 'Operational Framework',
+        paragraphs: [
+          'I introduced a simple planning rhythm: define event outcomes, split responsibilities by function, set weekly checkpoints, and run short post-event retrospectives.',
+          'This framework improved accountability and reduced last-minute coordination issues because owners had visible timelines and measurable tasks.',
+        ],
+      },
+      {
+        heading: 'Team Management Learnings',
+        paragraphs: [
+          'Delegation worked best when paired with context. Instead of assigning tasks only, we shared goals, audience expectations, and constraints so members could make better decisions independently.',
+          'Conflict resolution became easier when discussions focused on outcomes, not individual preferences, which kept the team aligned under pressure.',
+        ],
+      },
+      {
+        heading: 'Impact',
+        paragraphs: [
+          'We delivered institute-level events with stronger coordination and smoother on-ground execution.',
+          'This experience sharpened my ability to lead cross-functional teams, make decisions with limited information, and keep momentum during high-stakes execution windows.',
+        ],
+      },
+    ],
   },
   {
+    slug: 'deep-learning-answer-evaluation',
     title: 'Deep Learning-Based Answer Evaluation: Multi-Metric Scoring in Practice',
     category: 'Project Experience',
     date: 'Feb 2026',
@@ -208,6 +271,36 @@ export const blogs = [
       'A practical walkthrough of combining semantic similarity, NLI reasoning, and RAG feedback to improve descriptive answer assessment quality.',
     tags: ['SBERT', 'NLI', 'RAG', 'Groq'],
     link: 'https://github.com/Sidchav5/Deep-Learning-Based-Answer-Evaluater',
+    details: [
+      {
+        heading: 'Why This Project',
+        paragraphs: [
+          'Traditional descriptive answer checking is time-intensive and can vary between evaluators. We aimed to create a consistent scoring engine that still gives meaningful human-readable feedback.',
+          'The system needed to assess not only keyword overlap but also semantic meaning, logical alignment, and explanation quality.',
+        ],
+      },
+      {
+        heading: 'Evaluation Pipeline',
+        paragraphs: [
+          'We combined SBERT embeddings for semantic similarity, NLI for reasoning consistency, and ANN-based feature scoring for structured aggregation.',
+          'The final score blends multiple metrics such as relevance, completeness, and clarity to avoid overfitting to a single measurement method.',
+        ],
+      },
+      {
+        heading: 'Feedback Layer',
+        paragraphs: [
+          'Beyond scoring, we added a RAG-powered feedback layer using Groq-hosted models to explain strengths and gaps in student responses.',
+          'This transformed the tool from an evaluator into a learning assistant by returning actionable suggestions rather than only marks.',
+        ],
+      },
+      {
+        heading: 'Results and Takeaways',
+        paragraphs: [
+          'The platform improved grading consistency and reduced turnaround time for descriptive evaluations.',
+          'A key takeaway was that educational AI must be transparent and supportive; clear feedback drives adoption more than raw score precision alone.',
+        ],
+      },
+    ],
   },
 ];
 
