@@ -1,7 +1,7 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState } from 'react';
 import './EducationSection.css';
 
-function EducationSection({ education, multiple = false, showCourses = false, showHonors = false }) {
+function EducationSection({ education, multiple = false, showCourses = false, showHonors = false, layout = 'grid' }) {
   const [expandedItems, setExpandedItems] = useState(new Set());
   
   // Handle single education entry
@@ -157,7 +157,7 @@ function EducationSection({ education, multiple = false, showCourses = false, sh
         
         {multiple && (
           <>
-            {renderMultipleGrid(educations)}
+            {layout === 'timeline' ? renderMultipleTimeline(educations) : renderMultipleGrid(educations)}
           </>
         )}
         
