@@ -5,7 +5,7 @@ export const hero = {
   description:
     'AI and Data Science student focused on building practical, technology-driven solutions for social challenges. I design and develop production-ready applications across legal tech, inventory, and mobility, combining full-stack engineering with machine learning and reliable API integrations to create measurable real-world impact.',
   email: 'csiddhesh768@gmail.com',
-  resumeUrl: '/resume.txt',
+  resumeUrl: 'https://drive.google.com/file/d/1mUZB2r0NZD2zivMrNkXA7Zx6vZMmjjLf/view?usp=drive_link',
   location: 'Pune, Maharashtra',
   quickFacts: [
     'B.Tech AI & Data Science (2023-2027)',
