@@ -192,7 +192,7 @@
   content: '🐙';
 }
 
-.contact-grid a[href*="resume"]::before {
+.contact-grid a.resume-link::before {
   content: '📄';
 }
 

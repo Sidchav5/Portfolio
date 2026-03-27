@@ -140,6 +140,7 @@ function Footer({ contact, showNewsletter = false, showSocialLinks = false, show
           </a>
           {contact.resumeUrl && (
             <a
+              className="resume-link"
               href={contact.resumeUrl}
               target="_blank"
               rel="noopener noreferrer"
