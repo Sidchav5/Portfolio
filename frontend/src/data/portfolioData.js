@@ -130,6 +130,16 @@ export const projects = [
       'Built Flask backend workflows with web scraping, summarization, and result visualizations.',
     ],
   },
+  {
+    title: 'ResumeForge AI — ATS Resume Builder & Analyzer',
+    impact: 'Streamlined resume creation and optimization to maximize ATS screening pass-rates.',
+    githubUrl: 'https://github.com/Sidchav5/Credibility-Verification-',
+    points: [
+      'Architected a responsive, split-screen React 19 workspace featuring real-time PDF generation and LaTeX compilation.',
+      'Implemented an AI-powered analyzer scoring resumes across ATS, Content, Formatting, and Technical dimensions.',
+      'Built a dynamic styling engine supporting customizable typography, layout templates, spacing, and font-scaling.',
+    ],
+  },
 ];
 
 export const education = {
